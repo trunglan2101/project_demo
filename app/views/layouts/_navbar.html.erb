@@ -20,11 +20,11 @@
           <% end %>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              <%= current_user.name.capitalize %>
+              Account
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <li><a class="dropdown-item" href="<%= users_show_path %>">Profile</a></li>
-              <li><a class="dropdown-item" href="<%= users_edit_path %>">Edit</a></li>
+              <li><a class="dropdown-item" href="#">Profile</a></li>
+              <li><a class="dropdown-item" href="#">Edit</a></li>
               <li>
                 <%= link_to 'Sign Out', destroy_user_session_path, method: :delete, class: "dropdown-item" %>
               </li>
