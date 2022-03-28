@@ -1,0 +1,26 @@
+<h1>Catelogies#index</h1>
+<table class= "table table-primary">
+  <thead>
+    <th>Stt</th>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Action</th>
+  </thead>
+  <tbody>
+    <% @catelogies.each_with_index do |catelogy, index|%>
+      <tr>
+        <td><%= index+1+ @paginate %></td>
+        <td><%= catelogy.name %></td>
+        <td><%= catelogy.description %></td>
+     
+        <td>
+          <%= link_to 'Edit', catelogies_edit_path(catelogy) %>
+          <%= link_to 'Delete',catelogy, method: :delete, data: {confirm: "are you sure?"} %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<%= link_to 'Create', catelogies_new_path %>
+<%= will_paginate @catelogies %>
+
